@@ -28,6 +28,7 @@ func main() {
 			{"nombre": "Rita Carbonell", "numeroEmpleado": "E03"},
 			{"nombre": "Maria Luisa Bustos", "numeroEmpleado": "E04"},
 			{"nombre": "Manuel Mesa", "numeroEmpleado": "E05"},
+			{"nombre": "Leroy Jenkins", "numeroEmpleado": "E06"},
 		}
 		c.JSON(200, teachers)
 	})
