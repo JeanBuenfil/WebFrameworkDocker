@@ -15,7 +15,9 @@ pipeline {
             }
         }
         stage('Deploy'){
-            sh 'docker run -p 80:80 --name ${CONTAINER_NAME} -d {IMAGE_NAME}:${BUILD_ID}'
+            steps{
+                sh 'docker run -p 80:80 --name ${CONTAINER_NAME} -d {IMAGE_NAME}:${BUILD_ID}'
+            }
         }
     }
 }
