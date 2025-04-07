@@ -10,8 +10,8 @@ pipeline {
             steps{
                 sh 'docker build -t ${IMAGE_NAME}:${BUILD_ID} .'
 
-                sh 'docker stop ${CONTAINER_NAME}'
-                sh 'docker rm ${CONTAINER_NAME}'
+                sh 'docker stop ${CONTAINER_NAME} || true' 
+                sh 'docker rm ${CONTAINER_NAME} || true '
             }
         }
         stage('Deploy'){
